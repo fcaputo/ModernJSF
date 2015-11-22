@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    width: 960px;
+}
+
+nav {
+    width: 100%;
+    margin-bottom: 20px;
+    display: table;
+}
+
+nav ul {
+    -webkit-padding-start: 0px;
+    display: table-row;
+    width: 100%;
+}
+
+nav ul li {
+    display: table-cell;
+    text-align: center;
+    color: darkblue;
+    width: 33.3%;
+    padding: 5px 20px;
+    -webkit-padding-start: 20px;
+}
+
+nav a {
+    color: black;
+    display: block;
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    font-weight: bold;
+    padding: 0.25em 1em;
+    text-decoration: none;
+    background-color: #c0eec0;
+}
+
+nav a.active {
+    background-color: #c080c0;
+}
+
+#teaserLeft {
+    clear: left;
+}
+
+#teaserRight, #teaserLeft {
+    width: 20%;
+}
+
+#teaserRight, #teaserLeft, #main {
+    display: table-cell;
+}
+
+main {
+    width: 60%;
+    padding: 5px 20px;
+}
+
+aside {
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    display: block;
+    background-color: lightyellow;
+    padding: 10px;
+    width: 100px;
+    height: 200px;
+}
+
+footer {
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    background-color: lightcoral;
+    width: 960px;
+    margin-top: 20px;
+    padding: 20px;
+    clear: both;
+    display: block;
+    position: relative;
+}
+
+#shoppingCart button {
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 1em 1em;
+    background-color: red;
+    width: 80%;
+    height: 40px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}

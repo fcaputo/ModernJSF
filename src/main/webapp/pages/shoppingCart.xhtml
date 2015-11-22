@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition template="/template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <f:view transient="true" afterPhase="#{shoppingCart.resetSoldFlag}">
+        <section id="shoppingCart" data-count="#{shoppingCart.count}">
+            <ui:fragment rendered="#{shoppingCart.count > 0}">
+                You have #{shoppingCart.count} products in your shopping cart.
+
+                <form jsf:id="buy">
+                    <f:ajax execute="@form">
+                        <button jsf:id="submit" jsf:action="#{shoppingCart.buy}" class="btn btn-default">Buy now</button>
+                    </f:ajax>
+                </form>
+
+            </ui:fragment>
+            <ui:fragment rendered="#{shoppingCart.count == 0}">
+                <ui:fragment rendered="#{shoppingCart.sold}">
+                    Many thanks for purchasing our great products. Don't hesitate to purchase more.
+                </ui:fragment>
+                <ui:fragment rendered="#{not shoppingCart.sold}">
+                    Your shopping cart is still empty.
+                </ui:fragment>
+            </ui:fragment>
+        </section>
+    </f:view>
+</ui:composition>

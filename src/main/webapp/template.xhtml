@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<head jsf:id="head">
+    <title>Modern Websites with JSF and jQuery</title>
+    <link jsf:name="css/main.css"/>
+    <script jsf:name="js/jquery-2.1.4.min.js"></script>
+    <script jsf:library="javax.faces" jsf:name="jsf.js"></script>
+    <script jsf:name="js/jsfBridge.js"></script>
+    <script jsf:name="js/main.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a jsf:outcome="/pages/home.xhtml">Home</a></li>
+            <li><a jsf:outcome="/pages/products.xhtml">Products</a></li>
+            <li><a jsf:outcome="/pages/shoppingCart.xhtml">Shopping Cart</a></li>
+        </ul>
+    </nav>
+</header>
+<aside jsf:id="teaserLeft">
+    Here we are teasing really cool products.
+</aside>
+<main jsf:id="main" data-url="#{navigation.currentUrl}">
+    <ui:insert/>
+</main>
+<aside jsf:id="teaserRight">
+    Here we are teasing other really cool products.
+</aside>
+<footer>
+    This footer is really annoying...
+</footer>
+</body>
+</html>
